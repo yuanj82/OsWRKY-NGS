@@ -1,12 +1,12 @@
 文章题为"Integrated ATAC‐seq and RNA‐seq data analysis identifies transcription factors related to rice stripe virus infection in Oryza sativa"。该文章发表于 Molecular Plant Pathology（中科院一区，IF=4.9，第一作者：Miaomiao Li，通讯作者：Yuwen Lu）。
 
+此处对该文章的 RNA-seq 与 ATAC-seq 数据分析部分进行复现，所得出的数据文件均在此仓库。
+
 ## RNA-seq
 
 RNA-seq 测序的原始数据在 NCBI SRA 数据库：[PRJNA1080249](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA1080249)。
 
 原文材料与方法：`For RNA‐seq analysis, the raw data (raw reads) of fastq format were first processed through in‐house Perl scripts. In this step, clean data (clean reads) were obtained by removing reads containing adapter, reads containing poly‐N and low‐quality reads from raw data. At the same time, Q20, Q30 and GC content in the clean data were calculated. The resulting reads were mapped to the rice reference genome using HISAT2 (v. 2.0.5) with default parameters (Kim et al., 2015). The mapped reads of each sample were assembled by StringTie (v. 1.3.3b) (Pertea et al., 2015). FeatureCounts (v. 1.5.0‐p3) was used to count the reads numbers mapped to each gene (Liao et al., 2014). And then fragments per kilobase million (FPKM) of each gene was calculated based on the length of the gene and reads count mapped to this gene. Differential expression analysis of RSV infection and Mock infection was performed using the DESeq2 R package (v. 1.16.1) at the threshold of log2(fold change) ≥ |1| and the adjusted p‐value <0.05 (Love et al., 2014).`
-
-根据原文的步骤进行复现。
 
 使用 SRA Run Selector 生成 SRR_Acc_List.txt 文件，便于下载和进行后续分析，使用 sra-tools 下载测序数据：
 
