@@ -3,7 +3,7 @@ library("GenomicFeatures")
 library("ChIPseeker")
 library("txdbmaker")
 
-setwd("D:/Home/OsWRKY-NGS")
+setwd("D:/Home/OsWRKY-NGS/ATAC-seq")
 
 spombe <- makeTxDbFromGFF("./Oryza_sativa.IRGSP-1.0.57.gff3")
 
