@@ -2,6 +2,8 @@
 
 此处对该文章的 RNA-seq 与 ATAC-seq 数据分析部分进行复现，所得出的数据文件均在此仓库。
 
+> 关于结果的差异，作者回复：bam 需采用去重 pcr 的 reads；macs2 pileup 对 uniq 去重复的 bam 来计算 reads 堆积，然后归一化，到 per 1M reads 最后 bedGraphToBigWig  转化为 bw, 在可视化展示。
+
 ## RNA-seq
 
 RNA-seq 测序的原始数据在 NCBI SRA 数据库：[PRJNA1080249](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA1080249)。
